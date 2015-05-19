@@ -1,3 +1,21 @@
-*.png
+# media files
 *.mp4
 *.jpg
+*.png
+*.webm
+
+# VS build output
+bin/
+obj/
+
+#Projects not ready for storage yet
+IDisposableBestPracticesForCSharpDevelopers/
+CSharpEqualityAndComparisons/
+CSharpEventsDelegatesAndLambdas/
+SQLServerTransactSQLBasicDataRetrieval/
+MasteringCSharp4/
+CSharpCollectionFundamentals/
+ASP.NET MVC 4 Fundamentals/
+AlgorithmsAndDataStructures/
+WCF Jumpstart/
+GettingStartedWithKnockout/
