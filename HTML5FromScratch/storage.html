@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/global.css" />
+    <title>forms</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/storage.js"></script>
+</head>
+
+<section id="form-section">
+    <form id="data-form" name="data-form">
+        <label for="key">Key:</label>
+        <br />
+        <input id="key" type="text" name="key" />
+        <br />
+        <label for="value">Value:</label>
+        <br />
+        <textarea id="value" type="text" name="value"></textarea>
+        <br />
+
+        <input id="save" type="button" value="Save" />
+        <input id="retrieve" type="button" value="Retrieve" />
+        <input id="delete" type="button" value="Delete" />
+        <input id="review" type="button" value="Review" />
+        <input id="clear" type="button" value="Clear" />
+    </form>
+</section>
+
+<section id="data">
+    No Data
+</section>
+
+<body>
+</body>
+</html>

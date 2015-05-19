@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/global.css" />
+    <title>forms</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/forms.js"></script>
+</head>
+<section id="canvas-section">
+    <canvas id="myCanvas" width="600" height="400"></canvas>
+</section>
+
+<body>
+Video:
+<!--
+<br />
+
+<video id="video" controls="true" width="270" height="200" autoplay="true">
+    <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+</video>
+-->
+<br />
+
+<video id="video-two" controls="true" width="270" height="200" poster="images/ColorPicker.jpg">
+    <!--<source src="video/Color-HD-MP4.mp4" type="video/mp4" />-->
+    <source src="video/Color.webmsd.webm" />
+</video>
+<br />
+
+
+<p>Hello</p>
+
+<form id="myForm">
+    <label for="date-input">Please choose a date:</label>
+    <input id="date-input" type="date" />
+
+    <label for="time-input">Please choose a time:</label>
+    <input id="time-input" type="time" />
+
+    <label for="month-input">Please choose a time:</label>
+    <input id="month-input" type="month" />
+
+    <label for="week-input">Please choose a time:</label>
+    <input id="week-input" type="week" />
+
+    <br />
+    <br />
+    <label for="range-data">Range:</label>
+    <input id="range-data" type="range" min="1" max="100"  />
+
+    <label for="search-data">Search:</label>
+    <input id="search-data" type="search" placeholder="Enter search term" />
+
+    <label for="tel-data">Phone:</label>
+    <input id="tel-data" type="tel" required />
+
+    <label for="email-data">Email:</label>
+    <input id="email-data" type="email" required multiple />
+
+    <br />
+
+    <label for="color-data">Color:</label>
+    <input id="color-data" type="color" />
+    <label for="text-data">Data List:</label>
+    <input id="text-data" type="text" list="myDataList" />
+        <datalist id="myDataList">
+            <option label="Mr." value="Mr."></option>
+            <option label="Mrs." value="Mrs."></option>
+            <option label="Ms." value="Ms."></option>
+            <option label="Miss" value="Miss"></option>
+        </datalist>
+
+        <label for="progress-data">Progress Bar: </label>
+        <progress id="progress-data" value="5" max="15"></progress>
+
+        <label for="meter-data">Meter: </label>
+        <meter id="meter-data" min="10" max="100" value="99" low="20" high="80" optimum="50"></meter>
+    <!--
+
+        <br />
+    -->
+Before
+    <input type="submit" value="Submit" />
+</form>
+<br />
+<label for="outside-text-data">Other text:</label>
+<input id="outside-text-data" type="text" form="myForm" required />
+
+</body>
+</html>
