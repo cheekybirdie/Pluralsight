@@ -2,7 +2,8 @@
  * Created by Cindy Edwards on 5/20/2015.
  */
 (function() {
-    var app = angular.module("githubViewer", []);
+    // get a reference to githubViewer; defined in app.js
+    var app = angular.module("githubViewer");
 
     var MainController = function($scope, $interval, $log, $anchorScroll, $location, github) {
         function decrementCountdown() {
