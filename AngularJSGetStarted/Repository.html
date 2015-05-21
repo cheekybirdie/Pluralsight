@@ -1,0 +1,17 @@
+<h2>{{repos.name}}</h2>
+
+<div>
+    Issues: {{repos.open_issues_count}}
+</div>
+
+<div>
+    <ul>
+        <li ng-repeat="user in repos.contributors">
+        <img ng-src="{{user.avatar_url}}" alt="{{user.login}}" />
+        {{user.login}}
+        </li>
+    </ul>
+</div>
+
+<a href="#/main">Back to search</a>
+<a href="#/user/{{repos.owner.login}}">Back to {{repos.owner.login}}</a>

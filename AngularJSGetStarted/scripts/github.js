@@ -12,6 +12,27 @@
                 .then(returnResponseData);
         }
 
+        function getRepositoryDetails(userName, repositoryName) {
+            var repos;
+            var reposUrl = "https://api.github.com/repos/" + userName + "/" + repositoryName;
+
+            function processGetRepositoryDetailsResponse(response) {
+                repos = response.data;
+                var contributorsUrl = reposUrl + "/contributors";
+
+                return $http.get(contributorsUrl);
+            }
+
+            function processGetContributorsResponse(response) {
+                repos.contributors = response.data;
+                return repos;
+            }
+
+            return $http.get(reposUrl)
+                .then(processGetRepositoryDetailsResponse)
+                .then(processGetContributorsResponse)
+        }
+
         function getUser(userName) {
             var url = "https://api.github.com/users/" + userName;
 
@@ -19,12 +40,14 @@
                 .then(returnResponseData);
         }
 
+
         function returnResponseData(response) {
             return response.data;
         }
 
         return {
             getRepository: getRepository,
+            getRepositoryDetails: getRepositoryDetails,
             getUser: getUser
         }
     };
